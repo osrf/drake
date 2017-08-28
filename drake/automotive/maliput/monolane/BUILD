@@ -74,7 +74,6 @@ drake_cc_library(
     ],
     deps = [
         ":builder",
-        "@yaml_cpp",
     ],
 )
 
@@ -122,6 +121,7 @@ drake_cc_binary(
     deps = [
         ":loader",
         "//drake/common:text_logging_gflags",
+        "@yaml_cpp",
     ],
 )
 

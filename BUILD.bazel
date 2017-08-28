@@ -54,7 +54,6 @@ DRAKE_EXTERNAL_PACKAGE_INSTALLS = ["@%s//:install" % p for p in [
     "spdlog",
     "tinyobjloader",
     "vtk",
-    "yaml_cpp",
 ]] + ["//tools/install/%s:install" % p for p in [
     "gflags",
     "jchart2d",

@@ -270,13 +270,19 @@ github_archive(
     sha256 = "c6210992d328212a7752a2c888a15f5c597dbf31f03ac0d59457ceff2928a30b",  # noqa
 )
 
-github_archive(
+pkg_config_package(
     name = "yaml_cpp",
-    repository = "jbeder/yaml-cpp",
-    commit = "85af926ddc5f3c8fb438001743e65ec3a039ceec",
-    sha256 = "d94cdb84f346ce4d9f1f891505ed257796103f70ce56590bdd02e025c8503b16",  # noqa
-    build_file = "tools/yaml_cpp.BUILD",
+    modname = "yaml-cpp",
+    atleast_version = "0.5.2",
 )
+
+# github_archive(
+#     name = "yaml_cpp",
+#     repository = "jbeder/yaml-cpp",
+#     commit = "85af926ddc5f3c8fb438001743e65ec3a039ceec",
+#     sha256 = "d94cdb84f346ce4d9f1f891505ed257796103f70ce56590bdd02e025c8503b16",  # noqa
+#     build_file = "tools/yaml_cpp.BUILD",
+# )
 
 load("//tools:gurobi.bzl", "gurobi_repository")
 

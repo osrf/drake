@@ -13,9 +13,6 @@
 [submodule "externals/director"]
 	path = externals/director
 	url = https://github.com/RobotLocomotion/director.git
-[submodule "externals/yaml_cpp"]
-	path = externals/yaml_cpp
-	url = https://github.com/jbeder/yaml-cpp.git
 [submodule "externals/nlopt"]
 	path = externals/nlopt
 	url = https://github.com/stevengj/nlopt.git
