@@ -100,6 +100,7 @@ libtinyxml-dev
 libtool
 libxml2
 libxt6
+libyaml-cpp-dev
 make
 mesa-common-dev
 openjdk-8-jdk
