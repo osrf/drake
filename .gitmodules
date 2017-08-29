@@ -35,9 +35,6 @@
 [submodule "externals/robotlocomotion_lcmtypes"]
 	path = externals/robotlocomotion_lcmtypes
 	url = https://github.com/RobotLocomotion/lcmtypes.git
-[submodule "externals/pythonqt"]
-	path = externals/pythonqt
-	url = https://github.com/commontk/PythonQt.git
 [submodule "externals/ctk_python_console"]
 	path = externals/ctk_python_console
 	url = https://github.com/patmarion/ctkPythonConsole
