@@ -59,9 +59,9 @@ cmake_config(
     script = "@drake//tools:fcl-create-cps.py",
     version_file = "CMakeModules/FCLVersion.cmake",
     deps = [
-        "@ccd//:cps",
         "@eigen//:cps",
         "@octomap//:cps",
+        "@ccd",
     ],
 )
 

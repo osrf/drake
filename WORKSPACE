@@ -161,12 +161,9 @@ github_archive(
     build_file = "tools/bullet.BUILD",
 )
 
-github_archive(
+pkg_config_package(
     name = "ccd",
-    repository = "danfis/libccd",
-    commit = "v2.0",
-    sha256 = "1b4997e361c79262cf1fe5e1a3bf0789c9447d60b8ae2c1f945693ad574f9471",  # noqa
-    build_file = "tools/ccd.BUILD",
+    modname = "ccd",
 )
 
 github_archive(
