@@ -47,7 +47,6 @@ DRAKE_EXTERNAL_PACKAGE_INSTALLS = ["@%s//:install" % p for p in [
     "lcmtypes_robotlocomotion",
     "libbot",
     "nlopt",
-    "octomap",
     "pybind11",
     "sdformat",
     "spdlog",
