@@ -35,7 +35,7 @@ drake_cc_binary(
         ":utility",
         "//drake/automotive/maliput/monolane",
         "//drake/common:text_logging_gflags",
-        "@yaml_cpp"
+        "@yaml_cpp",
     ],
 )
 

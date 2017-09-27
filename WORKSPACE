@@ -300,8 +300,8 @@ github_archive(
 
 pkg_config_package(
     name = "yaml_cpp",
-    modname = "yaml-cpp",
     atleast_version = "0.5.2",
+    modname = "yaml-cpp",
 )
 
 # github_archive(
