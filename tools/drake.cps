@@ -64,11 +64,6 @@
       "Version": "1.0.4",
       "Hints": ["@prefix@/lib/cmake/tinyobjloader"],
       "X-CMake-Find-Args": ["CONFIG"]
-    },
-    "yaml-cpp": {
-      "Version": "0.5.5",
-      "Hints": ["@prefix@/lib/cmake/yaml-cpp"],
-      "X-CMake-Find-Args": ["CONFIG"]
     }
   },
   "Default-Components": [":drake"],
@@ -93,8 +88,7 @@
         "protobuf:protobuf",
         "robotlocomotion-lcmtypes:robotlocomotion-lcmtypes-cpp",
         "SDFormat:sdformat",
-        "spdlog:spdlog",
-        "yaml-cpp:yaml-cpp"
+        "spdlog:spdlog"
       ]
     },
     "drake-lcmtypes-cpp": {
