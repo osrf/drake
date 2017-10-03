@@ -91,6 +91,7 @@ libnetcdf-c++4
 libnetcdf11
 libogg0
 libpng-dev
+libprotobuf-dev
 libqt5multimedia5
 libqt5opengl5
 libqt5x11extras5
@@ -105,6 +106,7 @@ mesa-common-dev
 openjdk-8-jdk
 patchutils
 pkg-config
+protobuf-compiler
 python-dev
 python-gtk2
 python-lxml

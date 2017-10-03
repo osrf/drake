@@ -346,13 +346,17 @@ bind(
     actual = "@six_archive//:six",
 )
 
-# When updating the version of protobuf,
-# update tools/install/protobuf/protobuf.cps
-github_archive(
+pypi_archive(
+    name = "protobuf_python",
+    package = "protobuf",
+    version = "2.6.1",
+    sha256 = "8faca1fb462ee1be58d00f5efb4ca4f64bde92187fe61fde32615bbee7b3e745",  # noqa
+    build_file = "tools/protobuf_python.BUILD",
+)
+
+pkg_config_package(
     name = "protobuf",
-    repository = "google/protobuf",
-    commit = "v3.1.0",
-    sha256 = "fb2a314f4be897491bb2446697be693d489af645cb0e165a85e7e64e07eb134d",  # noqa
+    modname = "protobuf"
 )
 
 pypi_archive(
