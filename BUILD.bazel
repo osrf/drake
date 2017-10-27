@@ -56,7 +56,6 @@ DRAKE_EXTERNAL_PACKAGE_INSTALLS = ["@%s//:install" % p for p in [
     "vtk",
     "yaml_cpp",
 ]] + ["//tools/install/%s:install" % p for p in [
-    "ccd",
     "gflags",
     "jchart2d",
     "optitrack_driver",
@@ -67,6 +66,7 @@ install(
     name = "install",
     docs = ["LICENSE.TXT"],
     deps = [
+        "@ccd//:install",
         "//drake:install",
         "//drake/automotive/models:install_data",
         "//drake/bindings:install",
