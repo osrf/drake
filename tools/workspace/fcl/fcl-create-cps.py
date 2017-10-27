@@ -1,8 +1,12 @@
 #!/usr/bin/env python
 
+import sys
+
 from drake.tools.cpsutils import read_defs, read_requires
 
 defs = read_defs("set\(FCL_(\w+_VERSION)\s+([0-9]+)")
+with open('/tmp/foo', 'w') as outfp:
+    outfp.write(' '.join(sys.argv))
 defs.update(read_requires())
 
 content = """
@@ -15,6 +19,8 @@ content = """
   "Compat-Version": "%(MAJOR_VERSION)s.0.0",
   "Requires": {
     "ccd": {
+      "Hints": ["@prefix@/lib/cmake/ccd"],
+      "X-CMake-Find-Args": [ "CONFIG" ]
     },
     "Eigen3": {
       "Version": "%(Eigen3_VERSION)s",
