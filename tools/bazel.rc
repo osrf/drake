@@ -70,3 +70,7 @@ build:everything --define=WITH_MOSEK=ON
 test:everything --test_env=HOME
 # -- Options for SNOPT.
 build:everything --define=WITH_SNOPT=ON
+
+build --action_env=PKG_CONFIG_PATH=/opt/ros/kinetic/lib/pkgconfig
+
+test --action_env=LD_LIBRARY_PATH=/opt/ros/kinetic/lib
