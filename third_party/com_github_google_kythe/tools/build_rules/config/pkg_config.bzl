@@ -54,7 +54,7 @@ _cps_content = """
   "Components": {{
     "{package}": {{
       "Type": "dylib",
-      "Location": "{libdir}/lib{package}.so",
+      "Location": "{libdir}/lib{package}.{extension}",
       "Includes": ["{include}"]
     }}
   }}
@@ -233,10 +233,19 @@ def setup_pkg_config_package(repo_ctx):
   if libdir.error != None:
     return libdir
 
-  _write_build(repo_ctx, cflags.value, linkopts.value, install_content=_cps_build_content.format(package=repo_ctx.attr.modname))
+  _write_build(repo_ctx, cflags.value, linkopts.value,
+               install_content=_cps_build_content.format(package=repo_ctx.attr.modname))
 
   if generate_cps:
-    repo_ctx.file('ccd.cps', _cps_content.format(vers=installed_vers.value, package=repo_ctx.attr.modname, license=license, include=includedir.value, libdir=libdir.value), False)
+    extension = "dylib" if repo_ctx.os.name == "mac os x" else "so"
+    repo_ctx.file('ccd.cps',
+                  _cps_content.format(vers=installed_vers.value,
+                                      package=repo_ctx.attr.modname,
+                                      license=license,
+                                      include=includedir.value,
+                                      libdir=libdir.value,
+                                      extension=extension),
+                  False)
 
   return success(True)
 
