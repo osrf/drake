@@ -125,6 +125,7 @@
         "ignition-rndf0:ignition-rndf0",
         "lcm:lcm",
         "robotlocomotion-lcmtypes:robotlocomotion-lcmtypes-cpp",
+        "protobuf:libprotobuf",
         "spdlog:spdlog",
         "stx:stx",
         "yaml-cpp:yaml-cpp"
@@ -143,5 +144,8 @@
   },
   "X-CMake-Variables": {
     "drake_RESOURCE_ROOT": "${CMAKE_CURRENT_LIST_DIR}/../../../share/drake"
+  },
+  "X-CMake-Variables-Init": {
+    "CMAKE_MODULE_PATH": "${CMAKE_CURRENT_LIST_DIR}/modules"
   }
 }

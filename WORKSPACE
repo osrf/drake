@@ -64,6 +64,12 @@ local_repository(
     path = "third_party/com_github_google_protobuf",
 )
 
+new_local_repository(
+    name = "protobuf_cmake",
+    build_file = "tools/workspace/protobuf/protobuf_cmake.BUILD.bazel",
+    path = __workspace_dir__ + "/third_party/com_kitware_gitlab_cmake_cmake",
+)
+
 load("@kythe//tools/build_rules/config:pkg_config.bzl", "pkg_config_package")
 
 pkg_config_package(
@@ -339,8 +345,8 @@ pypi_archive(
 github_archive(
     name = "pycps",
     repository = "mwoehlke/pycps",
-    commit = "a6110cf2e769e9ff262a98ed18506ad565a14e89",
-    sha256 = "62b5054705152ba971a6e9a358bfcc1359eca6f3ba8e5788befd82d606933d98",  # noqa
+    commit = "544c1ded81b926a05b3dedb06504bd17bc8d0a95",
+    sha256 = "0b97cbaae107e5ddbe89073b6e42b679130f1eb81b913aa93da9e72e032a137b",  # noqa
     build_file = "tools/workspace/pycps/pycps.BUILD.bazel",
 )
 
