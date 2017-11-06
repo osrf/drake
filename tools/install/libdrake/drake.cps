@@ -124,8 +124,8 @@
         "ignition-math3:ignition-math3",
         "ignition-rndf0:ignition-rndf0",
         "lcm:lcm",
-        "robotlocomotion-lcmtypes:robotlocomotion-lcmtypes-cpp",
         "protobuf:libprotobuf",
+        "robotlocomotion-lcmtypes:robotlocomotion-lcmtypes-cpp",
         "spdlog:spdlog",
         "stx:stx",
         "yaml-cpp:yaml-cpp"
