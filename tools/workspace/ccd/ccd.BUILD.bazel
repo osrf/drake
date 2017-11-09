@@ -65,7 +65,6 @@ cc_library(
     ]),
     hdrs = CCD_PUBLIC_HEADERS,
     copts = CCD_COPTS,
-    defines = ["CCD_STATIC_DEFINE"],
     includes = ["src"],
 )
 

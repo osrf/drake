@@ -50,6 +50,8 @@ cc_library(
         ":fcl_h_genrule",
     ],
     includes = ["include"],
+    # Need to hide symbols from ccd
+    defines = ["CCD_STATIC_DEFINE"],
     deps = [
         "@ccd",
         "@eigen",
