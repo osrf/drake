@@ -4,12 +4,10 @@ load(
     "@drake//tools/workspace:cmake_configure_file.bzl",
     "cmake_configure_file",
 )
-
 load(
     "@drake//tools/workspace:generate_export_header.bzl",
     "generate_export_header",
 )
-
 load(
     "@drake//tools/install:install.bzl",
     "cmake_config",
@@ -67,8 +65,8 @@ cc_library(
     ]),
     hdrs = CCD_PUBLIC_HEADERS,
     copts = CCD_COPTS,
-    includes = ["src"],
     defines = ["CCD_STATIC_DEFINE"],
+    includes = ["src"],
 )
 
 cmake_config(
