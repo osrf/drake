@@ -50,6 +50,12 @@ CCD_PUBLIC_HEADERS = [
     "src/ccd_export.h",  # N.B. This is from generate_export_header above.
 ]
 
+# Options used when building the ccd code. Handled by cmake in upstream code
+CCD_COPTS = [
+    "-Wno-all",
+    "-fvisibility=hidden",
+]
+
 # Generates the library exported to users.  Upstream's CMake code lists out all
 # sources instead of globbing, but conveniently puts the public headers in one
 # place and private sources and headers in another; we'll use globbing here.
@@ -60,7 +66,7 @@ cc_library(
         "src/*.h",
     ]),
     hdrs = CCD_PUBLIC_HEADERS,
-    copts = ["-Wno-all"],
+    copts = CCD_COPTS,
     includes = ["src"],
     defines = ["CCD_STATIC_DEFINE"],
 )
