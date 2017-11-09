@@ -191,8 +191,8 @@ github_archive(
 github_archive(
     name = "ccd",
     repository = "j-rivero/libccd",
-    commit = "9090e11f73067ed68f38c5ae3cb411f96d9ce4f5",
-    sha256 = "8bc7cb882b4814419573ba8642b1fcafc09311f24357b8405c3a3824aa97bf28",  # noqa
+    commit = "a5a3d34c9a4fedb969b541f3ee98fb44e4120856",
+    sha256 = "6e0dad55053c53ea7b772a826ebae8a486b74490b4f91313c0be6414d6ff6fc2",
     build_file = "tools/workspace/ccd/ccd.BUILD.bazel",
 )
 
