@@ -51,7 +51,7 @@ cc_library(
     ],
     includes = ["include"],
     # Need to hide symbols from ccd
-    defines = ["CCD_STATIC_DEFINE"],
+    defines = ["CCD_STATIC_DEFINE", "FCL_STATIC_DEFINE"],
     deps = [
         "@ccd",
         "@eigen",
