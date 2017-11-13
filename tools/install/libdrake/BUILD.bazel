@@ -30,7 +30,7 @@ cc_binary(
     name = "libdrake.so",
     linkshared = 1,
     linkstatic = 1,
-    linkopts = [ "-Wl,--exclude-libs,ALL" ],
+    linkopts = [ "-Wl,--exclude-libs libfcl.a,libccd.a", "-Wl,--exclude-libs fcl,ccd" ],
     deps = LIBDRAKE_COMPONENTS,
 )
 
