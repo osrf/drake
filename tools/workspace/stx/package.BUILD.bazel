@@ -11,7 +11,10 @@ package(default_visibility = ["//visibility:public"])
 
 cc_library(
     name = "stx",
-    hdrs = ["include/stx/optional.hpp"],
+    hdrs = [
+        "include/stx/any.hpp",
+        "include/stx/optional.hpp",
+    ],
     includes = ["include"],
 )
 
